@@ -13,7 +13,7 @@ export default function Home() {
     },
     {
       img: "/src/assets/Card_img_3.jpg",
-      title: "One - On - One Sessions",
+      title: "One-On-One Sessions",
       para: "One-on-One interactive live online sessions",
     },
     {
@@ -30,10 +30,10 @@ export default function Home() {
   return (
     <div className="Home home_page" id="home">
       <div className="text-center">
-      <h2 className="NavTitle">Home</h2>
+      {/* <h2 className="NavTitle">Home</h2> */}
       <div className="content text-center  d-flex justify-content-center align-items-center flex-column gap-5">
         <h2 className="Title">
-          "Personalised <span>Learning</span> Experience"
+          Personalised <span>Learning</span> Experience
         </h2>
         <h2 className="Para blue text-wrap mb-5">
           Helping students think independently, bridge learning gaps, and

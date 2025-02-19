@@ -17,7 +17,7 @@ export default function Hero() {
             </h1>
             <h4>
               Personalized Online CBSE Tuition for <br />
-              Grades 3-9 in the GSC
+              Grades 2-9 in the GSC
             </h4>
             <div className="hero_buttons d-flex">
               <a className="book_button " href="#contact_us">Book a Demo</a>
@@ -64,5 +64,5 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  );
+  );          
 }

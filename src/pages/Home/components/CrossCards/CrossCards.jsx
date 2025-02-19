@@ -26,7 +26,7 @@ const CrossCards = () => {
             <div className="card-body d-flex justify-content-center align-items-center flex-column">
             <img src="/imgs/cross_card2.png"  className="crosscard_img" alt="" />
 
-                <h3>One - on - One Sessions</h3>
+                <h3>One-on-One Sessions</h3>
               <div className="cross_card_content text-center text-muted p-3">
               One-on-One interactive live online sessions              </div>
             </div>

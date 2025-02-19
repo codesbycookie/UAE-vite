@@ -66,33 +66,33 @@ export default function AboutUs() {
   const our_process_data = [
     {
       img: "/imgs/circular_card1.jpeg",
-      title: "Contact Us",
+      title: "1. Contact Us",
       content:
-        "Start by reaching out to us via WhatsApp or through our Contact Us form.",
+        "Start by reaching out to us via WhatsApp or through our Contact Us form",
     },
     {
       img: "/imgs/circular_card2.jpeg",
-      title: "Schedule a Trial Class",
+      title: "2. Schedule a Trial Class",
       content:
         "Book a trial class at your convenience to experience our teaching approach firsthand",
     },
     {
       img: "/imgs/circular_card3.jpeg",
-      title: "Initial Evaluation",
+      title: "3. Initial Evaluation",
       content:
         "During the first few sessions, we assess the student's strengths, weaknesses, and areas of improvement",
     },
     {
       img: "/imgs/circular_card4.jpeg",
-      title: "Tailored Learning Plan",
+      title: "4. Tailored Learning Plan",
       content:
         "Based on the evaluation, we create a customized program to meet your child’s unique learning needs",
     },
     {
       img: "/imgs/circular_car5.jpeg",
-      title: "Continuous Updates",
+      title: "5. Continuous Updates",
       content:
-        "During the first few sessions, we assess the student's strengths, weaknesses, and areas of improvement",
+        "Stay informed with bi-weekly performance reports to track your child’s progress and development",
     },
   ];
 

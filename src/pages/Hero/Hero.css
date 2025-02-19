@@ -63,6 +63,10 @@
     align-items: center;
     justify-content: center;
 }
+.book_button:hover{
+    background-color: #041D60;
+    color: #F27A0A;
+}
 
 .explore_us{
     color:#041D60;
@@ -79,6 +83,8 @@
     border: 2px transparent !important;
     border-radius: 20px 
 }
+
+
 
 /* 
 .hero_buttons .explore_us:hover{
