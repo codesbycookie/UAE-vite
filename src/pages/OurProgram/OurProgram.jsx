@@ -82,8 +82,6 @@ export default function OurProgram() {
   ];
 
 
-  
-
   return (
     <div className="ourprogram mt-4" id="our_program">
       <h5 className="ourprogram_title mb-5">

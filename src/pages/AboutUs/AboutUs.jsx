@@ -122,7 +122,7 @@ export default function AboutUs() {
           <div className="cards mt-5 row d-flex justify-content-center g-0">
             {about_card_contents.map((card, idx) => {
               return (
-                <div className="col-lg-4 d-flex justify-content-center">
+                <div className="col-lg-4 d-flex justify-content-center ">
                   <Card
                     img={card.img}
                     title={card.title}
