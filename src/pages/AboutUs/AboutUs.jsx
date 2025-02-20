@@ -6,32 +6,32 @@ import CircularCard from "./components/CircularCard/CircularCard";
 import { FaLongArrowAltDown, FaLongArrowAltRight } from "react-icons/fa";
 
 export default function AboutUs() {
-  const about_contents = [
-    {
-      img: "/imgs/our mission.jpg",
-      title: "Our Mission",
-      content:
-        "To deliver an online education experience for CBSE students currently in Grades 3-9 across the GCC region, fostering independent thinking, bridging learning gaps, and nurturing a love for knowledge.",
-      right_pic: false,
-      is_content: false,
-    },
-    {
-      img: "/imgs/oru vission.jpg",
-      title: "Our Vision",
-      content:
-        "To deliver an online education experience for CBSE students currently in Grades 3-9 across the GCC region, fostering independent thinking, bridging learning gaps, and nurturing a love for knowledge.",
-      right_pic: true,
-      is_content: false,
-    },
-    {
-      img: "",
-      title: "Our Founders",
-      content:
-        "IQ Bridge was founded by alumni of IIT and IIM, two of India’s most prestigious institutions. With a shared vision for academic brilliance and a passion for impactful education, our founders bring a wealth of expertise and leadership to redefine online learning. Their combined experience in cutting-edge technology, strategic problem-solving, and advanced pedagogy ensures that every student benefits from world-class guidance.",
-      right_pic: true,
-      is_content: true,
-    },
-  ];
+  // const about_contents = [
+  //   {
+  //     img: "/imgs/our mission.jpg",
+  //     title: "Our Mission",
+  //     content:
+  //       "To deliver an online education experience for CBSE students currently in Grades 3-9 across the GCC region, fostering independent thinking, bridging learning gaps, and nurturing a love for knowledge.",
+  //     right_pic: false,
+  //     is_content: false,
+  //   },
+  //   {
+  //     img: "/imgs/oru vission.jpg",
+  //     title: "Our Vision",
+  //     content:
+  //       "To deliver an online education experience for CBSE students currently in Grades 3-9 across the GCC region, fostering independent thinking, bridging learning gaps, and nurturing a love for knowledge.",
+  //     right_pic: true,
+  //     is_content: false,
+  //   },
+  //   {
+  //     img: "",
+  //     title: "Our Founders",
+  //     content:
+  //       "IQ Bridge was founded by alumni of IIT and IIM, two of India’s most prestigious institutions. With a shared vision for academic brilliance and a passion for impactful education, our founders bring a wealth of expertise and leadership to redefine online learning. Their combined experience in cutting-edge technology, strategic problem-solving, and advanced pedagogy ensures that every student benefits from world-class guidance.",
+  //     right_pic: true,
+  //     is_content: true,
+  //   },
+  // ];
 
   const about_card_contents = [
     {
@@ -102,7 +102,7 @@ export default function AboutUs() {
         <i>About Us</i>
       </h5>
 
-      {about_contents.map((about, idx) => {
+      {/* {about_contents.map((about, idx) => {
         return (
           <Tab
             title={about.title}
@@ -113,7 +113,7 @@ export default function AboutUs() {
             key={idx}
           />
         );
-      })}
+      })} */}
 
       <div className="whyiq">
         <Tab title={"Why IQ Bridge ?"} is_title={true} />
