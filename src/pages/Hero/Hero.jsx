@@ -10,7 +10,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function Hero() {
 
-
+  // Hero Page
   const navigate = useNavigate();
 
   const handleNavLinkClick = (path, sectionId) => {
