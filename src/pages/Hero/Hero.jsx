@@ -6,6 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { content } from "../../utils/Content";
 
 export default function Hero() {
+
   const { hero_page } = content;
 
   return (
