@@ -12,8 +12,12 @@
 
 }
 
+
 .sub_Card:hover {
     transform: scale(1.1);
+}
+.sub_Card:hover{
+    border: 2px dashed #041D60;
 }
 
 .sub_Card h4 {

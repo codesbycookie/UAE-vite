@@ -45,6 +45,10 @@
     transform: scale(1.1);
     transition: all 0.5s ;
 }
+#whycard:hover{
+   border: 2.5px dotted #041D60;
+}
+
 
 /* ======================= MEDIA QUERIES ======================== */
 

@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import "./Tab.css";
 
 export default function Tab({
@@ -9,7 +9,6 @@ export default function Tab({
   is_title = false,
   is_content = false,
   is_main_page = false,
-  col = 5
 }) {
   if(!is_main_page){
     if (is_title) {
@@ -23,7 +22,7 @@ export default function Tab({
             <div className="col d-flex justify-content-center">
               {" "}
               <h2 className="tab_title">
-                <i className="i_title">{title}</i>
+                {title}
               </h2>
             </div>
 
@@ -43,8 +42,8 @@ export default function Tab({
           </div>
           <div className="col ">
             {" "}
-            <h2 className="tab_title">
-            <i className="i_title">{title}</i>
+            <h2 className="tab_title d-flex justify-content-center align-items-center">
+            {title}
             </h2>
           </div>
           <div className="col d-flex justify-content-end">

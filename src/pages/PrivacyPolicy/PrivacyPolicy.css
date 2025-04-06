@@ -1,0 +1,55 @@
+/* Base styles */
+.bg-primary-custom {
+    background-color: #041D60 !important;
+  }
+  
+  .section-heading {
+    color: #F27A0A;
+    border-bottom: 2px solid #F27A0A;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+  }
+  
+  /* Font size adjustments */
+  p, li {
+    font-size: 20px;
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (max-width: 991px) {
+    p, li {
+      font-size: 18px;
+    }
+  
+    .section-heading {
+      font-size: 22px;
+    }
+  }
+  
+  /* Small devices (phones, less than 768px) */
+  @media (max-width: 767px) {
+    p, li {
+      font-size: 16px;
+    }
+  
+    .section-heading {
+      font-size: 20px;
+    }
+  
+    h1 {
+      font-size: 26px;
+    }
+  }
+
+  .email_link {
+    color: #F27A0A !important;
+    text-decoration: none;
+    margin: 0;
+    margin-left: 10px;
+  }
+
+  .email_link:hover {
+    text-decoration: underline;
+    color:#041D60 !important
+  }
+  

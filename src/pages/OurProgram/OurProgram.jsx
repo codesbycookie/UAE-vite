@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import "./OurProgram.css";
 import Tab from "../AboutUs/components/Tab/Tab";
@@ -7,8 +8,11 @@ import Testimonial from "./components/Testimonial/Testimonial";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import AboutUs from "../AboutUs/AboutUs";
+import { content } from "../../utils/Content";
 
 export default function OurProgram({ is_main_page }) {
+  const {our_program_page } = content;
+
   const [testimonials, setTestimonials] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -31,45 +35,7 @@ export default function OurProgram({ is_main_page }) {
     fetchTestimonials();
   }, []);
 
-  const subjectData = [
-    { title: "English", img: "/imgs/sub2.png", link: "#contact_us" },
-    { title: "Hindi", img: "/imgs/sub1.png", link: "#contact_us" },
-    { title: "Mathematics", img: "/imgs/sub6.png", link: "#contact_us" },
-    { title: "Science", img: "/imgs/sub5.png", link: "#contact_us" },
-    { title: "Social Science", img: "/imgs/sub4.png", link: "#contact_us" },
-    { title: "Computer Science", img: "/imgs/sub3.png", link: "#contact_us" },
-  ];
 
-  const teachingData = [
-    {
-      title: "Interactive Sessions",
-      img: "/imgs/teaching1.png",
-      content:
-        "Interactive live classes using multimedia tools that promote active participation",
-      is_right_pic: false,
-    },
-    {
-      title: "Quizzes",
-      img: "/imgs/teaching2.png",
-      content:
-        "Quizzes to encourage independent thought and self-directed learning",
-      is_right_pic: true,
-    },
-    {
-      title: "Regular Assessments",
-      img: "/imgs/teaching5.png",
-      content:
-        "Regular assessments to monitor progress and identify areas for improvement",
-      is_right_pic: false,
-    },
-    {
-      title: "Personalized Attention",
-      img: "/imgs/teaching4.png",
-      content:
-        "Personalized attention to meet the unique needs of each student",
-      is_right_pic: true,
-    },
-  ];
 
   const renderProgramSection = () => (
     <div className="ourprogram" id="our_program_section">
@@ -86,7 +52,7 @@ export default function OurProgram({ is_main_page }) {
         </div>
         <div className="col-12 col-md-5 p-2 d-flex justify-content-center align-items-center flex-column">
           <h4 className="ourprogram_content">
-            We offer one-on-one tutoring sessions tailored to each student's
+            We offer one-on-one tutoring sessions tailored to each student&apos;s
             unique learning style and pace, ensuring effective understanding and
             retention of concepts.
           </h4>
@@ -101,25 +67,23 @@ export default function OurProgram({ is_main_page }) {
       </div>
       <Tab title="Grade Specific Online Tuition" is_title={true} />
       <div className="row g-0 mb-4 md-flex flex-row" id="Courses">
-        {[2, 6].map((grade, idx) => (
+        {our_program_page.grade_card_content.map((card, idx) => (
           <div
             key={idx}
             className="col-12 col-md-6 p-2 mb-3 d-flex flex-column justify-content-center align-items-center"
           >
             <h3 className="grade_title">
-              Grade {grade} - {grade + 3}
+              {card.title}
             </h3>
             <div className="card text-bg-dark grade_card " data-aos="zoom-in" data-aos-duration="2000">
               <img
-                src={`/imgs/gradec${idx + 1}.png`}
+                src={card.img}
                 className="card-img"
-                alt={`Grade ${grade} - ${grade + 2}`}
+                alt={card.title}
               />
               <div className="card-img-overlay overlay-text">
                 <p className="card-text p-3 pt-5 fs-5">
-                  {grade === 2
-                    ? "Strong focus on foundational skills in Mathematics, Science, and English. Activities that stimulate curiosity and independent problem-solving."
-                    : "Advanced concepts in core subjects to prepare students for academic challenges. Comprehensive guidance to build critical thinking and analytical skills."}
+                  {card.description}
                 </p>
               </div>
             </div>
@@ -128,7 +92,7 @@ export default function OurProgram({ is_main_page }) {
       </div>
       <Tab title="Subjects We Cover" is_title={true} />
       <div className="all_sub p-5 pt-0 row d-flex g-0 align-items-center justify-content-center">
-        {subjectData.map((sub, idx) => (
+        {our_program_page.subject_data.map((sub, idx) => (
           <div
             key={idx}
             className="col-6 col-md-4 d-flex justify-content-center align-items-center"
@@ -147,7 +111,7 @@ export default function OurProgram({ is_main_page }) {
         className="teaching_container w-100 d-flex flex-column justify-content-center align-items-center"
         id="Teaching"
       >
-        {teachingData.map((d, idx) => (
+        {our_program_page.teaching_data.map((d, idx) => (
           <BroadCard
             key={idx}
             title={d.title}

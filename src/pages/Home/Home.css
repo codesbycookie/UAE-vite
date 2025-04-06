@@ -18,6 +18,7 @@
 
 .Title span {
     color: #F27A0A;
+    margin: 0 15px;
 }
 
 .para {
@@ -88,6 +89,18 @@
         line-height: 1.5;
     }
 }
+@media (max-width: 328px) {
+  .Title {
+    font-size: 1.2rem;
+    line-height: 1.25;
+    word-break: break-word; /* Prevent horizontal overflow */
+  }
+  
+  /* If the title has multiple words in the span */
+  .Title span {
+    display: inline-block; /* Helps with line breaks if needed */
+  }
+}
 @media (max-width: 320px) { /* Very Small Phones */
     .para {
         width: 80%; /* Make use of available space */
@@ -135,3 +148,37 @@
         line-height: 1.2;
     }
 }
+@media (max-width: 1199.98px) {
+    .Title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  /* For tablets and smaller laptops (less than 992px) */
+  @media (max-width: 991.98px) {
+    .Title {
+      font-size: 2rem;
+    }
+  }
+  
+  /* For landscape phones (less than 768px) */
+  @media (max-width: 767.98px) {
+    .Title {
+      font-size: 1.75rem;
+      line-height: 1.25;
+    }
+  }
+  
+  /* For portrait phones (less than 576px) */
+  @media (max-width: 575.98px) {
+    .Title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* For very small phones (less than 400px) */
+  @media (max-width: 399.98px) {
+    .Title {
+      font-size: 1.3rem;
+    }
+  }

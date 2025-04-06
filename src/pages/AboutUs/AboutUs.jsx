@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./AboutUs.css";
 import Card from "./components/Card/Card";
 import Tab from "./components/Tab/Tab";
@@ -6,96 +6,69 @@ import CircularCard from "./components/CircularCard/CircularCard";
 import { FaLongArrowAltDown, FaLongArrowAltRight } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
-export default function AboutUs({is_main_page}) {
-  const about_contents = [
-    {
-      img: "/imgs/our mission.jpg",
-      title: "Our Mission",
-      content:
-        "To deliver an online education experience for CBSE students currently in Grades 3-9 across the GCC region, fostering independent thinking, bridging learning gaps, and nurturing a love for knowledge.",
-      right_pic: false,
-      is_content: false,
-    },
-    {
-      img: "/imgs/oru vission.jpg",
-      title: "Our Vision",
-      content:
-        "To become the premier platform for academic excellence, empowering students to achieve their highest potential augmented through innovative and personalized help with their school curriculum.",
-      right_pic: true,
-      is_content: false,
-    },
-    {
-      img: "",
-      title: "Our Founders",
-      content:
-        "IQ Bridge was founded by alumni of IIT and IIM, two of India’s most prestigious institutions. With a shared vision for academic brilliance and a passion for impactful education, our founders bring a wealth of expertise and leadership to redefine online learning. Their combined experience in cutting-edge technology, strategic problem-solving, and advanced pedagogy ensures that every student benefits from world-class guidance.",
-      right_pic: true,
-      is_content: true,
-    },
-  ];
+import {content} from '../../utils/Content.jsx';
 
-  const about_card_contents = [
-    {
-      img: "/imgs/about c1.jpg",
-      title: "Elite Educators",
-      content:
-        "   All our tutors are experienced professionals with a deep understanding of the CBSE curriculum, with a passion for teaching",
-    },
-    {
-      img: "/imgs/about c2.jpg",
-      title: "Personalized Learning Approach",
-      content:
-        "Each student’s learning journey is uniquely tailored to maximize understanding, retention, and academic performance",
-    },
-    {
-      img: "/imgs/about c3.jpg",
-      title: "Flexible Schedules",
-      content: "Designed to fit into the routines of families across the GCC, ensuring convenience and consistency",
-    },
-    {
-      img: "/imgs/about c4.jpg",
-      title: "Affordable Pricing",
-      content:
-        "Quality education should be accessible. We provide top-notch tutoring services at competitive rates, ensuring value for your investment",
-    },
-    {
-      img: "/imgs/about c5.jpg",
-      title: "State-of-the-Art Technology",
-      content: "Our interactive virtual classrooms provide an immersive and engaging learning experience",
-    },
-  ];
-  const our_process_data = [
-    {
-      img: "/imgs/circular_card1.jpeg",
-      title: "1.Contact Us",
-      content:
-        "Start by reaching out to us via WhatsApp or through our Contact Us form. We’ll guide you through the next steps",
-    },
-    {
-      img: "/imgs/circular_card2.jpeg",
-      title: "2. Schedule a Trial Class",
-      content:
-        "Book a trial class at your convenience to experience our teaching approach firsthand",
-    },
-    {
-      img: "/imgs/circular_card3.jpeg",
-      title: "3. Initial Evaluation",
-      content:
-        "During the first few sessions, we assess the student's strengths, weaknesses, and areas of improvement",
-    },
-    {
-      img: "/imgs/circular_card4.jpeg",
-      title: "4. Tailored Learning Plan",
-      content:
-        "Based on the evaluation, we create a customized program to meet your child’s unique learning needs",
-    },
-    {
-      img: "/imgs/circular_car5.jpeg",
-      title: "5. Continuous Updates",
-      content:
-        "Stay informed with bi-weekly performance reports to track your child’s progress and development",
-    },
-  ];
+const {about_page} = content;
+
+export default function AboutUs({is_main_page}) {
+  // const about_contents = [
+  //   {
+  //     img: "/imgs/our mission.jpg",
+  //     title: "Our Mission",
+  //     content:
+  //       "To deliver an online education experience for CBSE students currently in Grades 3-9 across the GCC region, fostering independent thinking, bridging learning gaps, and nurturing a love for knowledge.",
+  //     right_pic: false,
+  //     is_content: false,
+  //   },
+  //   {
+  //     img: "/imgs/oru vission.jpg",
+  //     title: "Our Vision",
+  //     content:
+  //       "To become the premier platform for academic excellence, empowering students to achieve their highest potential augmented through innovative and personalized help with their school curriculum.",
+  //     right_pic: true,
+  //     is_content: false,
+  //   },
+  //   {
+  //     img: "",
+  //     title: "Our Founders",
+  //     content:
+  //       "IQ Bridge was founded by alumni of IIT and IIM, two of India’s most prestigious institutions. With a shared vision for academic brilliance and a passion for impactful education, our founders bring a wealth of expertise and leadership to redefine online learning. Their combined experience in cutting-edge technology, strategic problem-solving, and advanced pedagogy ensures that every student benefits from world-class guidance.",
+  //     right_pic: true,
+  //     is_content: true,
+  //   },
+  // ];
+
+  // const about_card_contents = [
+  //   {
+  //     img: "/imgs/about c1.jpg",
+  //     title: "Elite Educators",
+  //     content:
+  //       "   All our tutors are experienced professionals with a deep understanding of the CBSE curriculum, with a passion for teaching",
+  //   },
+  //   {
+  //     img: "/imgs/about c2.jpg",
+  //     title: "Personalized Learning Approach",
+  //     content:
+  //       "Each student’s learning journey is uniquely tailored to maximize understanding, retention, and academic performance",
+  //   },
+  //   {
+  //     img: "/imgs/about c3.jpg",
+  //     title: "Flexible Schedules",
+  //     content: "Designed to fit into the routines of families across the GCC, ensuring convenience and consistency",
+  //   },
+  //   {
+  //     img: "/imgs/about c4.jpg",
+  //     title: "Affordable Pricing",
+  //     content:
+  //       "Quality education should be accessible. We provide top-notch tutoring services at competitive rates, ensuring value for your investment",
+  //   },
+  //   {
+  //     img: "/imgs/about c5.jpg",
+  //     title: "State-of-the-Art Technology",
+  //     content: "Our interactive virtual classrooms provide an immersive and engaging learning experience",
+  //   },
+  // ];
+ 
 
   const location = useLocation();
 
@@ -122,7 +95,7 @@ export default function AboutUs({is_main_page}) {
       </h5>
      ): ('')}
 
-      {about_contents.map((about, idx) => {
+      {about_page.about_us_tabs.map((about, idx) => {
         return (
           <Tab
           is_main_page={is_main_page}
@@ -141,7 +114,7 @@ export default function AboutUs({is_main_page}) {
 
         <div className="about_cards ">
           <div className="cards row d-flex justify-content-center g-0">
-            {about_card_contents.map((card, idx) => {
+            {about_page.about_card_contents.map((card, idx) => {
               return (
                 <div  key={idx} className="col-lg-4 d-flex justify-content-center">
                   <Card
@@ -158,7 +131,7 @@ export default function AboutUs({is_main_page}) {
         <Tab title={"Our Process"} is_title={true} />
         <div className="process my-3" id='our_process'>
           <div className="row g-0 circular_cards d-flex justify-content-around align-items-center pb-0">
-            {our_process_data.map((card, idx) => {
+            {about_page.our_process_data.map((card, idx) => {
               return (
                 <div key={idx} className="col-xl-2 d-flex flex-sm-column flex-xl-row justify-content-center align-items-center">
                   <CircularCard
@@ -168,7 +141,7 @@ export default function AboutUs({is_main_page}) {
                     idx={idx}
                   />
                   <div className="fs-1 mb-5" style={{ color: "#041D60" }}>
-                    {idx < our_process_data.length - 1 ? (
+                    {idx < about_page.our_process_data.length - 1 ? (
                       <>
                         <div className="d-none d-xl-block">
                           <FaLongArrowAltRight />

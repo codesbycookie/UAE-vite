@@ -3,25 +3,21 @@ body {
   overflow-x: hidden;
   width: 100vw
 }
-/* Width of the scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 10px; /* For horizontal scrollbars */
+  width: 5px;
+  height: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: white; 
+  background: transparent; 
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background:  linear-gradient(30deg,#F27A0A, #041D60);; 
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }

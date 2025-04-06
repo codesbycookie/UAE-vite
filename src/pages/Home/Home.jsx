@@ -1,44 +1,23 @@
-import React, { useEffect } from "react";
 import "./Home.css";
-import Home_card from "./Home_card";
 import CrossCards from "./components/CrossCards/CrossCards";
 import VerticalCards from "./components/VerticalCards/VerticalCards";
+import {content} from '../../utils/Content.jsx'
 
 export default function Home() {
-  const card_data = [
-    {
-      img: "/src/assets/Card_img_2.jpg",
-      title: "Elite Mentorship",
-      para: "Mentoring from IIT-IIM Alumni Founders",
-    },
-    {
-      img: "/src/assets/Card_img_3.jpg",
-      title: "One - On - One Sessions",
-      para: "One-on-One interactive live online sessions",
-    },
-    {
-      img: "/src/assets/Card_img_4.jpg",
-      title: "Personalized study plans",
-      para: "Personalized Study Plans tailored to each student",
-    },
-    {
-      img: "/src/assets/Card_img_1.jpg",
-      title: "Certified Mentors",
-      para: "Experienced and certified CBSE educators",
-    },
-  ];
+
+  const {home_page} = content;
+  
+  console.log(home_page.card_contents)
 
   return (
     <div className="Home home_page" id="home_section">
       <div className="text-center">
       <div className="content text-center  d-flex justify-content-center align-items-center flex-column gap-5">
         <h2 className="Title">
-          Personalised <span>Learning</span> Experience
+         {home_page.title[0]}<span>{home_page.title[1]}</span>{home_page.title[2]}
         </h2>
         <h2 className="para">
-          Helping students think independently, bridge learning gaps, and
-          achieve academic
-          excellence through expert-led personalized education
+        {home_page.description}
         </h2>
       </div>
       </div>
@@ -91,26 +70,12 @@ export default function Home() {
             }}
           ></div>
         </div>
-        <CrossCards />
+        <CrossCards contents={home_page.card_contents}/>
       </div>
 
       <div className="pt-5 d-md-block d-lg-none d-xl-none d-block">
-        <VerticalCards />
+        <VerticalCards contents={home_page.card_contents}/>
       </div>
-
-      {/* {card_data.map((card_data,index) =>{
-      return  (
-        <div key={index}
-        className="Home_card text-center d-flex justify-content-center align-items-center gap-3 border-2 rounded-5">
-          <Home_card 
-          img={card_data.img} 
-          title={card_data.title} 
-          para={card_data.para}
-          
-          />
-        </div>
-    );
-    })} */}
     </div>
   );
 }

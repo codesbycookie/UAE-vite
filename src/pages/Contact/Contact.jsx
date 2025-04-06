@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Contact.css";
 import Input from "./components/Input/Input";
 import Tab from "../AboutUs/components/Tab/Tab";
 import Accordion from "./components/Accordion/Accordion";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { content } from "../../utils/Content.jsx";
 
 export default function Contact() {
+
+  const { contact_page } = content;
+
+
+
   const [formData, setFormData] = useState({
     student_name: "",
     contact_number: "",
@@ -39,6 +45,12 @@ export default function Contact() {
       }
     }
 
+    if (formData.email && !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+      errors.email = "Email is missing or invalid.";
+      checked = false;
+    }
+
+    
     if (isNaN(parseInt(formData.contact_number))) {
       toast.error("Phone number must be a number.");
       checked = false;
@@ -84,38 +96,6 @@ export default function Contact() {
     return s[0].toUpperCase() + s.slice(1).split("_").join(" ");
   };
 
-  const accordion_data = [
-    {
-      question: "What makes IQ Bridge different ?",
-      answer:
-        " Our institution’s elite foundation by IIT-IIM alumni, coupled with expert CBSE-certified tutors, ensures a premium learning experience. We emphasize independent thinking and bridging learning gaps, making education transformative.",
-    },
-    {
-      question: "How are your classes conducted ?",
-      answer:
-        " Our online sessions use state-of-the-art technology to deliver interactive, live lessons that engage students and promote active learning.",
-    },
-    {
-      question: "How can parents monitor progress ? ",
-      answer:
-        " We provide detailed progress reports, conduct regular assessments, and offer parent-teacher meetings to keep you informed about your child’s performance.",
-    },
-    {
-      question: "What are the qualifications of your tutors ?",
-      answer:
-        " Our tutors are experienced educators with expertise in the CBSE curriculum and a passion for teaching.",
-    },
-    {
-      question: "Is there flexibility in scheduling classes ?",
-      answer:
-         " Yes, we offer flexible class timings to accommodate the diverse schedules of families across the GCC region.",
-    },
-    {
-      question: "Is there a trial class ?",
-      answer:
-        " Yes, we offer a free demo class to help you experience our teaching methods and see how we can make a difference in your child’s education.",
-    },
-  ];
 
   return (
     <div className="contact_container" id="contact_section">
@@ -146,7 +126,7 @@ export default function Contact() {
       <div className="faq_section mt-5">
         <Tab title="Frequently Asked Questions (FAQs)" is_title={true} />
         <div className="accordions_tab d-flex flex-wrap justify-content-center align-items-center">
-          {accordion_data.map((acc, idx) => (
+          {contact_page.accordion_data.map((acc, idx) => (
             <div className="col-md-6 col-12" key={idx}>
               <Accordion question={acc.question} answer={acc.answer} id={idx} />
             </div>
